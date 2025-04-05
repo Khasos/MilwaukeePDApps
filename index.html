@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PD Application</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f0f0f0;
+      padding: 2rem;
+    }
+    form {
+      max-width: 600px;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #1f4ed8;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <form action="https://formspree.io/f/YOUR-ID-HERE" method="POST">
+    <h2>Police Department Application</h2>
+    <label>
+      Full Name:
+      <input type="text" name="name" required />
+    </label>
+    <label>
+      Discord Tag:
+      <input type="text" name="discord" required />
+    </label>
+    <label>
+      Age:
+      <input type="number" name="age" required />
+    </label>
+    <label>
+      Why do you want to join the PD?
+      <textarea name="motivation" rows="5" required></textarea>
+    </label>
+    <button type="submit">Submit Application</button>
+  </form>
+</body>
+</html>
