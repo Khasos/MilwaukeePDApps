@@ -2,60 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PD Application</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FiveM Police Department Application</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
     body {
-      font-family: sans-serif;
-      background: #f0f0f0;
+      margin: 0;
+      background: #0c1f3c;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 2rem;
     }
-    form {
-      max-width: 600px;
-      background: white;
+    .container {
+      background: #1e3a5f;
       padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
     }
     label {
       display: block;
       margin-top: 1rem;
     }
-    input, textarea {
+    input, textarea, select {
       width: 100%;
-      padding: 0.5rem;
+      padding: 0.7rem;
       margin-top: 0.5rem;
+      border: none;
+      border-radius: 8px;
     }
     button {
-      margin-top: 1.5rem;
-      padding: 0.75rem 1.5rem;
-      background: #1f4ed8;
-      color: white;
+      background: #4a90e2;
+      color: #fff;
       border: none;
-      border-radius: 5px;
+      padding: 1rem 2rem;
+      margin-top: 2rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background: #357ab7;
     }
   </style>
 </head>
 <body>
-  <form action="https://formspree.io/f/xnnpgepy" method="POST">
-    <h2>Police Department Application</h2>
-    <label>
-      Full Name:
-      <input type="text" name="name" required />
-    </label>
-    <label>
-      Discord Tag:
-      <input type="text" name="discord" required />
-    </label>
-    <label>
-      Age:
-      <input type="number" name="age" required />
-    </label>
-    <label>
-      Why do you want to join the PD?
-      <textarea name="motivation" rows="5" required></textarea>
-    </label>
-    <button type="submit">Submit Application</button>
-  </form>
+  <div class="container">
+    <h1>Police Department Application</h1>
+    <form action="https://formspree.io/f/xnnpgepy" method="POST">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="Full Name" required />
+
+      <label for="discord">Discord Tag</label>
+      <input type="text" id="discord" name="Discord" required />
+
+      <label for="age">Age</label>
+      <input type="number" id="age" name="Age" required />
+
+      <label for="timezone">Timezone</label>
+      <input type="text" id="timezone" name="Timezone" required />
+
+      <label for="experience">Prior RP or Law Enforcement Experience</label>
+      <textarea id="experience" name="Experience" rows="4" required></textarea>
+
+      <label for="motivation">Why do you want to join the PD?</label>
+      <textarea id="motivation" name="Motivation" rows="5" required></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
 </body>
 </html>
